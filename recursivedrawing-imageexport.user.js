@@ -7,7 +7,7 @@
 // ==/UserScript==
 
 var d = document,
-    $d = function(x) { return document.getElementById(x); },
+    $d = function(x) { return d.getElementById(x); },
     sideBar = $d('sidebarRight'),
     link = d.createElement('a'),
     style = d.createElement('style');
@@ -40,5 +40,5 @@ link.href = '#';
 link.innerHTML = 'export';
 link.onclick = exportImage;
 
-document.body.appendChild(style);
+d.body.appendChild(style);
 sideBar.appendChild(link);
